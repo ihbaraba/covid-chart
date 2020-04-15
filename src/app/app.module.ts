@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChartsModule } from 'ng2-charts';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,9 @@ import { ChartsModule } from 'ng2-charts';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgbModule,
-    ChartsModule,
-    AppRoutingModule
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

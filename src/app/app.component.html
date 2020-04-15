@@ -1,16 +1,18 @@
-<div class="container-fluid">
-  <div class="flex-item justify-content-center">
-    <div style="display: block;width: 60%;margin: 0 auto;" >
-    <canvas baseChart width="400" height="400"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                [plugins]="lineChartPlugins"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+<div class="container-scroller">
+  
+  <div class="container-fluid page-body-wrapper">
+    
+    <div class="main-panel" [ngClass]="{ 'main-panel-only' : !showSidebar }">
+      <div class="content-wrapper">
+        
+        <div contentAnimate *ngIf="!isLoading" class="h-100">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      
+      <!-- partial -->
     </div>
+    <!-- main-panel ends -->
   </div>
+  <!-- page-body-wrapper ends -->
 </div>
