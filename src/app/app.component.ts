@@ -1,8 +1,8 @@
 
 import { Component, OnInit, ViewChild } from '@angular/core';
+
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
-
 
 @Component({
   selector: 'app-root',
@@ -143,6 +143,3 @@ export class AppComponent implements OnInit {
 
 
 
-export class LineChartComponent  {
-  
-}
