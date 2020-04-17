@@ -3,13 +3,14 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
   public lineChartData: ChartDataSets[] = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
@@ -88,11 +89,22 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.onGetDataSpecial();
+    this.onGetDataAll();
   }
-
+  onGetDataSpecial() {
+    this.http.get('https://covidapi.info/api/v1/country/IND/2020-03-15').subscribe(data => {
+      console.log(data);
+    });
+  }
+  onGetDataAll() {
+    this.http.get('https://covidapi.info/api/v1/country/IND/timeseries/2020-03-15/2020-03-20').subscribe(data => {
+      console.log(data);
+    });
+  }
   public randomize(): void {
     for (let i = 0; i < this.lineChartData.length; i++) {
       for (let j = 0; j < this.lineChartData[i].data.length; j++) {

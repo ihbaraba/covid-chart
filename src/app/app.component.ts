@@ -8,12 +8,6 @@ import { Router, NavigationEnd, NavigationStart, RouteConfigLoadStart, RouteConf
 })
 export class AppComponent implements OnInit{
   title = 'covid-chart';
-
-  showSidebar: boolean = true;
-  showNavbar: boolean = true;
-  showFooter: boolean = true;
-  isLoading: boolean;
-
   constructor(private router: Router) {
   }
 
@@ -27,7 +21,3 @@ export class AppComponent implements OnInit{
     });
   }
 }
-
-
-
-

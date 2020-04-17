@@ -1,15 +1,11 @@
 <div class="container-scroller">
-  
   <div class="container-fluid page-body-wrapper">
-    
-    <div class="main-panel" [ngClass]="{ 'main-panel-only' : !showSidebar }">
+    <div class="main-panel">
       <div class="content-wrapper">
-        
-        <div contentAnimate *ngIf="!isLoading" class="h-100">
+        <div contentAnimate class="h-100">
           <router-outlet></router-outlet>
         </div>
       </div>
-      
       <!-- partial -->
     </div>
     <!-- main-panel ends -->

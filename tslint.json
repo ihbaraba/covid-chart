@@ -2,21 +2,13 @@
   "extends": "tslint:recommended",
   "rules": {
     "origin-ordered-imports": [
-
       true,
-
       "one-blank-line",
-
       [
-
         "^@angular/.+",
-
         "^((?!(@app|@core|@environments|@e2e|@test-utils|@utils|@share|./|../)).+)",
-
         "^((@app|@core|@environments|@e2e|@test-utils|@utils|@share|./|../)).+"
-
       ]
-
     ],
     "align": {
       "options": [
