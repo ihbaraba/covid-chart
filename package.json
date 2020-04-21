@@ -48,6 +48,7 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "tslint-origin-ordered-imports-rule": "^1.2.2",
-    "typescript": "~3.8.3"
+    "typescript": "^3.8.3",
+    "typescript-tslint-plugin": "^0.5.5"
   }
 }
