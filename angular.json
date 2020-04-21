@@ -92,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/chart.js/dist/css/chart.min.css",
               "src/styles.scss"
             ],
             "scripts": []
